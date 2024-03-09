@@ -1,0 +1,1 @@
+Move-Item -Path "C:\Location\*(1).flac" -Destination .\Dupe

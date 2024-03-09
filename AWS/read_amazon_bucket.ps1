@@ -1,0 +1,1 @@
+Read-S3Object -BucketName "testbucket" -Folder "enter full local path"

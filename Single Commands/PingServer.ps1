@@ -1,0 +1,1 @@
+ping -t SERVER_NAME | where {$_ -match "timed out"}

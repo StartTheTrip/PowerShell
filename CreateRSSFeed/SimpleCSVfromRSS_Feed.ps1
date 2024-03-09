@@ -1,0 +1,1 @@
+Invoke-RestMethod -Uri https://rss.packetstormsecurity.com/news/ | select pubDate,title,link,category | export-csv output\security_news.csv -Delimiter ',' -NoTypeInformation

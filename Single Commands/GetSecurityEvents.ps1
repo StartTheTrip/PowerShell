@@ -1,0 +1,1 @@
+Get-Content C:\List\To\Servers.txt | Get-EventLog -Logname Security -Newest 10

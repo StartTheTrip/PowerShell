@@ -1,0 +1,1 @@
+net user defaultuser100000 /delete
