@@ -1,22 +1,4 @@
-﻿#Removes text from filename based on simple regex
-Function Get-Folder($Location="")
-
-{
-    [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms")|Out-Null
-
-    $foldername = New-Object System.Windows.Forms.FolderBrowserDialog
-    $foldername.Description = "Select a folder"
-    $foldername.rootfolder = "MyComputer"
-    $foldername.SelectedPath = $Location
-
-    if($foldername.ShowDialog() -eq "OK")
-    {
-        $folder += $foldername.SelectedPath
-    }
-    return $folder
-
-
-}
+﻿#Removes text from filename based on simple rege
 Function Get-RemoveString($Location="",$stringToRemove="DONOTEDITTHISPROTECTION") {
 	Write-Host "Windows: Remove Text from Filename`n`nv0.1 by StartTheTrip`n`n"
 	if ( [string]::IsNullOrWhiteSpace($preString) ) {
@@ -52,6 +34,4 @@ Function Get-RemoveString($Location="",$stringToRemove="DONOTEDITTHISPROTECTION"
     }
 }
 
-
-#Get-Folder
 Get-RemoveString
