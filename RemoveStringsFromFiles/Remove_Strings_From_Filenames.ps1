@@ -1,21 +1,3 @@
-Function Get-Folder($Location="")
-
-{
-    [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms")|Out-Null
-
-    $foldername = New-Object System.Windows.Forms.FolderBrowserDialog
-    $foldername.Description = "Select a folder"
-    $foldername.rootfolder = "MyComputer"
-    $foldername.SelectedPath = $Location
-
-    if($foldername.ShowDialog() -eq "OK")
-    {
-        $folder += $foldername.SelectedPath
-    }
-    return $folder
-
-
-}
 Function Get-RemoveString($Location="",$stringToRemove="DONOTEDITTHISPROTECTION") {
 	Write-Host "Windows: Remove Text from Filename`n`nv0.1 by StartTheTrip`n`nWARNING: YOU CANNOT UNDO THIS BE CAREFUL!!!`n"
 	if ( [string]::IsNullOrWhiteSpace($preString) ) {
@@ -50,3 +32,5 @@ Function Get-RemoveString($Location="",$stringToRemove="DONOTEDITTHISPROTECTION"
 		}
     }
 }
+
+Get-RemoveString
