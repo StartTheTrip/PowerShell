@@ -18,7 +18,7 @@ Function Search-ForFile($Location=""){
     if($foldername.ShowDialog() -eq "OK")
     {
 		$folder += $foldername.SelectedPath
-        Get-ChildItem -Path $folder -Filter "$preString" -Recurse -ErrorAction SilentlyContinue
+        Get-ChildItem -Path $folder -Filter "*$preString*" -Recurse -ErrorAction SilentlyContinue
 		Write-Host "`nFinished...`nCheck: $folder`n`nExiting..."
 		Start-Sleep -s 3
 		exit
